@@ -5,13 +5,18 @@ import Resume from "./components/Resume";
 import Footer from "./components/Footer";
 import Repos from "./components/Repo";
 import Contact from "./components/Contact";
-import "./App.css";
+import Try from "./components/Try";
+// import "./App.css";
 
 function App() {
   return (
     <main>
       <Header />
+      <About />
+      {/* <Try /> */}
       <Repos />
+      <Resume />
+      <Contact />
       <Footer />
     </main>
   );

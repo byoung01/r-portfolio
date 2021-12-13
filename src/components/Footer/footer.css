@@ -5,3 +5,7 @@
   margin-bottom: 0;
   list-style: none;
 }
+.nav-container {
+  padding: 2em 0;
+  background: #bbbcbe;
+}

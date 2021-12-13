@@ -2,6 +2,15 @@
   display: flex;
   flex-direction: row;
 }
+.nav-item {
+  color: black;
+  padding-right: 0.5em;
+  font-size: 1.3em;
+}
+.nav-item:hover {
+  text-decoration: none;
+  color: rgb(117, 117, 117);
+}
 .h-container {
   padding: 0.5em 1em 0 1em;
   display: flex;
@@ -10,13 +19,13 @@
   flex-direction: row;
 }
 .nav-item {
-  color: white;
+  color: black;
   padding-right: 0.5em;
   font-size: 1.3em;
 }
 .logo {
   font-size: 1.4em;
-  color: white;
+  color: black;
 }
 .burger {
 }

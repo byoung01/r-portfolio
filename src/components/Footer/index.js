@@ -1,30 +1,29 @@
 import React from "react";
+import github from "../../images/github.png";
+import resume from "../../images/resume.png";
+import linkedIn from "../../images/linkedIn.png";
 import "./footer.css";
 
 function Footer() {
   return (
-    <div>
+    <div className="nav-container">
       <nav class="nav">
-        <a
-          class="nav-link active"
-          href="https://github.com/byoung01"
-          target="_blank"
-        >
-          Github
+        <a href="https://github.com/byoung01" target="blank" rel="noreferrer">
+          <img alt="github" src={github} />
         </a>
         <a
-          class="nav-link active"
-          href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin"
-          target="_blank"
+          href="https://www.linkedin.com/in/brevin-young-b58113220/"
+          target="blank"
+          rel="noreferrer"
         >
-          LinkedIn
+          <img alt="linkedIn" src={linkedIn} />
         </a>
         <a
-          class="nav-link active"
-          href="https://github.com/byoung01"
-          target="_blank"
+          href="https://docs.google.com/document/d/1x3FpWtSgWiGnw2KqOYhIdar3DtmReTbBu2vpS_cczpo/export/pdf"
+          target="blank"
+          rel="noreferrer"
         >
-          Git
+          <img alt="resume" src={resume} />
         </a>
       </nav>
     </div>

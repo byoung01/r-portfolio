@@ -1,0 +1,55 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: poppins;
+}
+#wrapper {
+  overflow: hidden;
+}
+.cus-div {
+  width: 100%;
+  position: relative;
+}
+
+#skew2 {
+  background: white;
+  z-index: 10;
+}
+#skew3 {
+  background: #c2c2c2c2;
+  z-index: 8;
+}
+#skew4 {
+  background: #fff;
+  z-index: 7;
+}
+.cus-div:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  z-index: -1;
+  bottom: 0;
+  content: "";
+}
+#skew2:after {
+  transform-origin: left top;
+  transform: skewY(-3deg);
+}
+#skew4:after {
+  transform-origin: left bottom;
+  transform: skewY(3deg);
+}
+#skew3:after {
+  transform-origin: right bottom;
+  transform: skewY(-3deg);
+}
+.content1 {
+  font-weight: bold;
+  text-align: center;
+  padding: 200px 50px;
+  overflow: hidden;
+  display: block;
+  height: auto;
+}

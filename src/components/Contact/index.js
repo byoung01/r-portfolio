@@ -1,91 +1,73 @@
-import React, { useState } from "react";
-import { validateEmail } from "../../utils/helpers";
+import React, { useRef, useState } from "react";
+import emailjs from "emailjs-com";
+import "./contact.css";
 
-function Contact() {
+const Contact = () => {
+  const form = useRef();
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
+  const [message, setMessage] = useState("");
+  const [placeHolder, setPlaceHolder] = useState("");
 
-  const handleFormSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
 
-    if (!validateEmail(email)) {
-      setErrorMessage("Email or username is invalid");
-      return;
-    }
+    emailjs
+      .sendForm(
+        "contact_form",
+        "template_427ymex",
+        form.current,
+        "user_JBj57MCiRD4r6XvRz1f9B"
+      )
+      .then(
+        (result) => {
+          setName("");
+
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    setName("");
+    setEmail("");
+    setMessage("");
+    setPlaceHolder("Thank you!");
   };
+
   return (
-    <div>
-      <form>
-        <div class="form-group row" style={{ padding: "1em 0 1em 3em" }}>
-          <label
-            for="colFormLabelSm"
-            class="col-form-label col-form-label-sm"
-            style={{ flex: "0 0 auto", width: "9%" }}
-          >
-            Name
-          </label>
-          <div class="col-sm-10">
-            <input
-              value={email}
-              type="email"
-              class="form-control form-control-sm"
-              id="colFormLabelSm"
-              placeholder="name"
-            />
-          </div>
-        </div>
-        <div class="form-group row" style={{ padding: "1em 0 1em 3em" }}>
-          <label
-            for="colFormLabelSm"
-            class="col-form-label col-form-label-sm"
-            style={{ flex: "0 0 auto", width: "9%" }}
-          >
-            Email
-          </label>
-          <div class="col-sm-10">
-            <input
-              type="email"
-              class="form-control form-control-sm"
-              id="colFormLabelSm"
-              placeholder="email"
-            />
-          </div>
-        </div>
-        <div class="form-group row" style={{ padding: "1em 0 1em 3em" }}>
-          <label
-            for="colFormLabelSm"
-            class="col-form-label col-form-label-sm"
-            style={{ flex: "0 0 auto", width: "9%" }}
-          >
-            Message
-          </label>
-          <div class="col-sm-10">
-            <input
-              type="email"
-              class="form-control form-control-sm"
-              id="colFormLabelSm"
-              placeholder="message"
-            />
-          </div>
-        </div>
-        <button
-          type="button"
-          class="btn btn-secondary"
-          onClick={handleFormSubmit}
-          style={{ margin: "1em 0 0 3em" }}
-        >
-          Submit
-        </button>
+    <div className="contact-container">
+      <h1>Contact Me</h1>
+      <form className="contact-form" ref={form} onSubmit={sendEmail}>
+        <label id="label-text">Name</label>
+        <input
+          className="input-bar"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          type="text"
+          name="user_name"
+        />
+
+        <label id="label-text">Email</label>
+        <input
+          className="input-bar"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          type="email"
+          name="user_email"
+        />
+
+        <label id="label-text">Message</label>
+        <textarea
+          className="input-bar"
+          name="message"
+          value={message}
+          placeHolder={placeHolder}
+          onChange={(e) => setMessage(e.target.value)}
+        />
+        <input type="submit" value="Send" className="input-bar enter-button" />
       </form>
-      {errorMessage && (
-        <div>
-          <p className="error-text" style={{ margin: "1em 0 0 3em" }}>
-            {errorMessage}
-          </p>
-        </div>
-      )}
     </div>
   );
-}
-
+};
 export default Contact;

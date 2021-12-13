@@ -1,33 +1,39 @@
 import React from "react";
+import "./resume.css";
 
 function Resume() {
   return (
-    <div style={{ margin: "0 2em 0 2em" }}>
-      <div style={{ paddingBottom: "2em" }}>
-        <a
-          target="_blank"
-          href="https://docs.google.com/document/d/1Wl_Vz83OOuMWHPAfsHdrRQP-ldhvwpwDWUdZoU0lZKI/edit#heading=h.n64fgzu3lwuy"
-        >
-          Resume
-        </a>
+    <div className="resume-bg">
+      <div className="cus-div2" id="skew3">
+        <h1>Skills</h1>
+        <div className="resume-cont">
+          <div className="content2">
+            <h3 className="">Frontend </h3>
+            <ul className="list-group list-group-flush">
+              <li class="">HTML</li>
+              <li class="">CSS</li>
+              <li class="">JavaScript</li>
+              <li class="">Node</li>
+              <li class="">React</li>
+            </ul>
+          </div>
+          <div className="content2">
+            <h3>Backend </h3>
+            <ul className="list-group list-group-flush">
+              <li class="">SQL</li>
+              <li class="">Express</li>
+              <li class="">Node</li>
+              <li class="">MongoDB</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <h3>Front end experience</h3>
-      <ul class="list-group list-group-flush" style={{ marginBottom: "2em" }}>
-        <li class="list-group-item">HTML</li>
-        <li class="list-group-item">CSS</li>
-        <li class="list-group-item">JavaScript</li>
-        <li class="list-group-item">Node</li>
-        <li class="list-group-item">React</li>
-      </ul>
-      <h3>Back end experience</h3>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">SQL</li>
-        <li class="list-group-item">Express</li>
-        <li class="list-group-item">Node</li>
-        <li class="list-group-item">MongoDB</li>
-      </ul>
+      <div className="cus-div" id="skew4">
+        <div className="bar-cont">
+          <h1 className="bottom-bar">bar here</h1>
+        </div>
+      </div>
     </div>
   );
-  // https://docs.google.com/document/d/1Wl_Vz83OOuMWHPAfsHdrRQP-ldhvwpwDWUdZoU0lZKI/edit#heading=h.n64fgzu3lwuy
 }
 export default Resume;

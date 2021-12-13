@@ -19,7 +19,7 @@ function Repos() {
     },
     {
       name: "Soundboard",
-      desc: "this is a description for the description while trying to get the layout correct",
+      desc: "Website that uses keys on the users keyboard to play sounds",
       repo: "https://github.com/athaight/group-project-one",
       link: "https://appchat4us.herokuapp.com/",
     },

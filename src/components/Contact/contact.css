@@ -1,0 +1,44 @@
+input {
+  width: 600px;
+}
+textarea {
+  height: 10em;
+  width: 600px;
+}
+.contact-container {
+  background-color: #f1f4f9;
+  display: flex;
+}
+.contact-form {
+  background-color: #f1f4f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  padding-bottom: 13em;
+}
+.contact-container h1 {
+  text-align: center;
+  font-size: 3em;
+  padding: 2em 0.5em;
+}
+
+#label-text {
+  padding: 1em 0;
+  font-size: 1.25em;
+}
+.enter-button {
+  margin-top: 2em;
+}
+.input-bar {
+  padding: 0 1em;
+  width: 90%;
+  margin-bottom: 0.5em;
+}
+@media only screen and (max-width: 700px) {
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

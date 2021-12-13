@@ -13,14 +13,22 @@ function Projects({ project }) {
         alt=""
       />
       <div className="holder">
-        <a href={link} target="_blank">
-          <h1 className="textName">{name}</h1>
-        </a>
+        <h1 className="textName">{name}</h1>
         <div className="p-text">
           <p>{desc}</p>
-          <a href={repo} target="_blank" className="repo-link">
-            Github
-          </a>
+          <div className="a-container">
+            <a href={link} target="_blank" className="repo-link">
+              Live Demo
+            </a>
+            <a
+              href={repo}
+              target="_blank"
+              className="repo-link"
+              id="code-margin"
+            >
+              Code
+            </a>
+          </div>
         </div>
       </div>
     </div>

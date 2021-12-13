@@ -1,24 +1,35 @@
 a {
+  color: black;
   text-decoration: none;
+  line-height: 1.8em;
 }
-.bruh {
-  width: 18em;
-  margin-bottom: 1em;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
-  border: 1 px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25 rem;
+a:hover {
+  text-decoration: none;
+  color: black;
 }
+
 .holder {
   padding-left: 2.25em;
 }
+.a-container {
+  display: flex;
+  justify-content: space-around;
+}
+#code-margin {
+  margin-right: 1em;
+}
 .repo-link {
   margin-top: 0.5em;
+  text-decoration: none;
+  line-height: 1em;
+  border: 3px solid black;
+  border-radius: 16px;
+  padding: 0.25em;
+}
+.repo-link:hover {
+  border: 3px solid black;
+  box-shadow: 7px 7px 21px 5px #b6b6b65c;
+  background-color: #d9dce0;
 }
 .p-text {
   padding-left: 1em;
@@ -35,11 +46,13 @@ a {
   flex-direction: row;
 }
 .flex-item {
+  width: 90%;
   display: flex;
   align-items: center;
-  margin-bottom: 10em;
+  margin-bottom: 6.5em;
 }
 .flex-item img {
+  object-fit: cover;
   flex-grow: 0;
   flex-shrink: 0;
   max-width: 500px;
@@ -50,11 +63,16 @@ a {
 }
 
 @media only screen and (max-width: 750px) {
+  #code-margin {
+    margin-right: 1.25em;
+  }
   .flex-item {
     display: flex;
     flex-direction: column;
+    margin-bottom: 2.5em;
   }
   .flex-item img {
+    object-fit: contain;
     flex-grow: 0;
     flex-shrink: 0;
     max-width: 500px;
@@ -78,15 +96,16 @@ a {
   }
   .p-text {
     padding-left: 1em;
-    padding-bottom: 3em;
+    padding-bottom: 2em;
   }
 }
 @media only screen and (max-width: 610px) {
   .flex-item img {
+    object-fit: fill;
     flex-grow: 0;
     flex-shrink: 0;
     max-width: 90%;
-    max-height: 500px;
+    max-height: 400px;
     box-shadow: 0px 0px 18px 8px #88888889;
     border-radius: 0px;
     border: 1em;
