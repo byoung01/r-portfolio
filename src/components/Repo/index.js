@@ -23,16 +23,16 @@ function Repos() {
       repo: "https://github.com/athaight/group-project-one",
       link: "https://appchat4us.herokuapp.com/",
     },
-    {
-      name: "E-commerce Backend",
-      desc: "this is a description for the description while trying to get the layout correct",
-      repo: "https://github.com/byoung01/e-commerce",
-      link: "https://github.com/byoung01/e-commerce",
-    },
+    // {
+    //   name: "E-commerce Backend",
+    //   desc: "this is a description for the description while trying to get the layout correct",
+    //   repo: "https://github.com/byoung01/e-commerce",
+    //   link: "https://github.com/byoung01/e-commerce",
+    // },
   ]);
   return (
     <div className="repo-container">
-      <h1 className="p-title">projects</h1>
+      <h1 className="p-title">Projects</h1>
       {projects.map((project, id) => (
         <Projects project={project} key={id} />
       ))}

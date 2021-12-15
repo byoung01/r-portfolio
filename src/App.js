@@ -5,7 +5,6 @@ import Resume from "./components/Resume";
 import Footer from "./components/Footer";
 import Repos from "./components/Repo";
 import Contact from "./components/Contact";
-import Try from "./components/Try";
 // import "./App.css";
 
 function App() {
@@ -13,7 +12,6 @@ function App() {
     <main>
       <Header />
       <About />
-      {/* <Try /> */}
       <Repos />
       <Resume />
       <Contact />

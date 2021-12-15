@@ -1,8 +1,10 @@
+body,
+body * {
+  font-family: "Poppins", sans-serif;
+}
 .hero-image {
-  /* background-color: #192841; */
-  background-image: url(../../images/221429.jpg);
+  background: rgb(4, 71, 126);
   opacity: 0.99;
-  background-color: black;
   background-size: 100% 100%;
   animation: gradient 15s ease infinite;
   height: 92vh;
@@ -38,18 +40,18 @@
 }
 
 .name {
-  color: black;
+  color: #f1f4f9;
   font-size: 4.5em;
 }
 .text {
   line-height: 1.8em;
-  color: black;
+  color: #f1f4f9;
   font-size: 1.8em;
 }
 
 @media only screen and (max-width: 750px) {
   .hero-image {
-    background-color: #f1f4f9;
+    background: rgb(4, 71, 126);
     background-size: 100% 100%;
     animation: gradient 15s ease infinite;
     height: 90vh;
@@ -69,13 +71,15 @@
   }
   .name {
     color: black;
-    font-size: 3.3em;
+    font-size: 3em;
+    font-weight: bold;
   }
 
   .text {
     line-height: 1.8em;
     color: black;
     font-size: 1.2em;
+    font-weight: bold;
   }
   .sidebar {
     display: flex;
@@ -100,5 +104,10 @@
   .sidebar a {
     padding-top: 4em;
     padding-right: 3em;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .name {
+    font-size: 2.5em;
   }
 }

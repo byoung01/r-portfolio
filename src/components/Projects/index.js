@@ -15,7 +15,7 @@ function Projects({ project }) {
       <div className="holder">
         <h1 className="textName">{name}</h1>
         <div className="p-text">
-          <p>{desc}</p>
+          <p className="p-text">{desc}</p>
           <div className="a-container">
             <a href={link} target="_blank" className="repo-link">
               Live Demo

@@ -5,7 +5,7 @@ function Resume() {
   return (
     <div className="resume-bg">
       <div className="cus-div2" id="skew3">
-        <h1>Skills</h1>
+        <h1 className="s-title">Skills</h1>
         <div className="resume-cont">
           <div className="content2">
             <h3 className="">Frontend </h3>

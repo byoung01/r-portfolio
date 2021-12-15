@@ -8,6 +8,11 @@
   width: 100%;
   position: relative;
 }
+.about-h3 {
+  font-size: 2em;
+  font-weight: bold;
+  padding-bottom: 0.8em;
+}
 #skew2 {
   background: #f1f4f9;
   z-index: 10;

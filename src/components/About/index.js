@@ -6,7 +6,7 @@ function About() {
     <div>
       <div className="cus-div" id="skew2">
         <div className="content1">
-          <h3>About</h3>
+          <h3 className="about-h3">About</h3>
           <p>
             Hi my name is Brevin Young! Im a junior web developer with a focus
             on front end development.

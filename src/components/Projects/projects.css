@@ -33,6 +33,8 @@ a:hover {
 }
 .p-text {
   padding-left: 1em;
+  margin-top: 0;
+  margin-bottom: 1 rem;
 }
 .textName {
   margin-left: 0.5em;
